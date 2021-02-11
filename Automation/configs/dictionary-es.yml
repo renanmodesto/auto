@@ -1,0 +1,410 @@
+<<<<<<< Updated upstream
+# Verbs list..
+=======
+# Verbs list.
+>>>>>>> Stashed changes
+verbs:
+    {
+        # Portuguese Verbs.
+        Abrir: Func.openNewTab,                         # Open new tab
+        Alternar: Func.alterWindow,                     # Altern in two web windows.
+        Alterar: Func.alterWindow,                      # Altern in two web windows.
+        Aguardar: Func.wait,                            # Wait time to execute next step.
+        Apagar: Func.clear,                             # Clear field data
+        Arrastar: Func.dragDrop,                        # Drag and drop element to a X,Y position. - Sintaxe: Component, x:<pixel position>, y:<pixel position>
+        Acessar: Func.openPage,                         # Access a page address.
+        Atualizar: Func.refreshPage,                    # Reload the page
+        Avançar: Func.forwardPage,                      # Goes one step forward in the browser history
+        Clicar: Func.click,                             # Click in a component.
+<<<<<<< Updated upstream
+=======
+        Conectar: APIFUNC.get_full_host,                # Get endpoint.
+>>>>>>> Stashed changes
+        Duplo: Func.doubleClick,                        # Double click in a component.
+        Fechar: Func.close,                             # Close. (Blank=Close window / Filled=Close browser).
+        Informar: Func.inform,                          # Choose a option in a browser alert.
+        Mover: Func.mouseOver,                          # Move the mouse over an element.
+        Navegar: Func.openBrowser,                      # Open the browser.
+        Preencher: Func.fillField,                      # Type a text.
+        Pressionar: Func.rightClick,                    # Right click of the mouse.
+        Retornar: Func.returnWindow,                    # Return to the main browser window.
+        Rolar: Func.scrollPage,                         # Scroll the page on the Y axis
+        Segurar: Func.dragDropToElement,                # Drag and drop component to another. - Sintaxe: From component, To component.
+        Selecionar: Func.selectDropDownList,            # Select an item in a dropdownlist.
+        Teclar: Func.pressButton,                       # Type an especific button in keyboard (Example: ESC, TAB, F1)
+        Validar: Func.validateData,                     # Get a component text and compare with expected.
+        Voltar: Func.backPage,                          # Goes one step backward in the browser history
+        NoExecute: Func.noExecute,                      # Don't execute the step that starts with the word "No" or "Não". ALWAYS in a variable.
+
+        # Spanish Verbs.
+        # Abrir: Func.openNewTab, -> Equal Portuguese   # Open new tab
+        Cambiar: Func.alterWindow,                      # Altern in two web windows.
+        Esperar: Func.wait,                             # Wait time to execute next step.
+        Limpiar: Func.clear,                            # Clear field data
+        # Arrastar -> Equal Portuguese                  # Drag and drop element to a X,Y position. - Sintaxe: Component, x:<pixel position>, y:<pixel position>
+        Acceder: Func.openPage,                         # Access a page address.
+        Actualizar: Func.refreshPage,                   # Reload the page
+        Avanzar: Func.forwardPage,                      # Goes one step forward in the browser history
+        # Clicar  -> Equal Portuguese                   # Click in a component.
+        DobleClic: Func.doubleClick,                    # Double click in a component.
+        Cerrar: Func.close,                             # Close. (Blank=Close window / Filled=Close browser).
+        Elegir: Func.inform,                            # Choose an option in a browser alert.
+        # Mover -> Equal Portuguese                     # Move the mouse over an element.
+        # Navegar -> Equal Portuguese                   # Open the browser.
+        Llenar: Func.fillField,                         # Type a text.
+        Presionar: Func.rightClick,                     # Right click of the mouse.
+        # Retornar -> Equal Portuguese                  # Return to the main browser window.
+        Desplazamiento: Func.scrollPage,                # Scroll the page on the Y axis
+        Sostener: Func.dragDropToElement,               # Drag and drop component to another. - Sintaxe: From component, To component.
+        # Selecionar -> Equal Portuguese                # Select an item in a dropdownlist.
+        # Teclar -> Equal Portuguese                    # Type an especific button in keyboard (Example: ESC, TAB, F1)
+        # Validar -> Equal Portuguese                   # Get a component text and compare with expected.
+        Retroceder: Func.backPage,                      # Goes one step backward in the browser history
+        # NoExecute -> Func.noExecute                   # Don't execute the step that starts with the word "No" or "Não". ALWAYS in a variable.
+
+        # English Verbs.
+        Open: Func.openNewTab,                          # Open new tab
+        Switch: Func.alterWindow,                       # Altern in two web windows.
+        Wait: Func.wait,                                # Wait time to execute next step.
+        Clear: Func.clear,                              # Clear field data
+        Drag: Func.dragDrop,                            # Drag and drop element to a X,Y position. - Sintaxe: Component, x:<pixel position>, y:<pixel position>
+        Access: Func.openPage,                          # Access a page address.
+        Refresh: Func.refreshPage,                      # Reload the page
+        Forwar: Func.forwardPage,                       # Goes one step forward in the browser history
+        Click: Func.click,                              # Click in a component.
+        Double: Func.doubleClick,                       # Double click in a component.
+        Close: Func.close,                              # Close. (Blank=Close window / Filled=Close browser).
+        Inform: Func.inform,                            # Choose a option in a browser alert.
+        Move: Func.mouseOver,                           # Move the mouse over an element.
+        Navegate: Func.openBrowser,                     # Open the browser.
+        Fill: Func.fillField,                           # Type a text.
+        Right: Func.rightClick,                         # Right click of the mouse.
+        Return: Func.returnWindow,                      # Return to the main browser window.
+        Scroll: Func.scrollPage,                        # Scroll the page on the Y axis
+        Hold: Func.dragDropToElement,                   # Drag and drop component to another. - Sintaxe: From component, To component.
+        Select: Func.selectDropDownList,                # Select an item in a dropdownlist.
+        Press: Func.pressButton,                        # Type an especific button in keyboard (Example: ESC, TAB, F1)
+        Validate: Func.validateData,                    # Get a component text and compare with expected.
+        Back: Func.backPage,                            # Goes one step backward in the browser history
+        # NoExecute -> Func.noExecute                   # Don't execute the step that starts with the word "No" or "Não". ALWAYS in a variable.
+    }
+#List to search the elements. Try to find following the order below.
+searchElements:
+    {
+        searchByID: searchElementByID,
+        searchByName: searchElementByName,
+        searchByXpath: searchElementByXpath,
+        searchByiFrame: searchElementByiFrame,
+        searchByLinkText: searchElementByLinkText,
+        searchByParcialLinkText: searchElementByParcialLinkText,
+        searchByTagName: searchElementByTagName,
+        searchByClassName: searchElementByClassName,
+        searchByCSS: searchElementByCSS
+    }
+#List to search the elements attributes to the GetText (Text validation).
+#IMPORTANT: Add new lines if necessary.
+searchForAttribute:
+    {
+        buscarPorID: id,
+        buscarPorNome: name,
+        buscarPorClass: class,
+        buscarPorHREF: a,
+        buscarPorSize: size
+    }
+#List to search the elements to the GetText (Text validation).
+#IMPORTANT: Add new lines if necessary.
+searchForComponent:
+    {
+        buscarPorDiv: div,
+        buscarPorTD: td,
+        buscarPorTR: tr
+    }
+
+#List of logs.
+logs:
+    {
+        AccessAzure: {Type: Success,Msg: Acceso exitoso a Azure DevOps , Where: accessAzure},
+<<<<<<< Updated upstream
+        OpenPage: {Type: Success,Msg: Acceso a la página con éxito , Where: openPage},
+=======
+        OpenPage: {Type: Success,Msg: Acceso exitoso a la página , Where: openPage},
+>>>>>>> Stashed changes
+        ActionStart: {Type: Log,Msg: Inicio de la ejecución de la automatización , Where: createLog},
+        AlterWindow: {Type: Success,Msg: El enfoque de la pantalla ha cambiado , Where: alterWindow},
+        AttachmentList: {Type: Sucesso,Msg: Éxito en la lectura del archivo adjunto del caso de prueba manual , Where: attachmentList},
+        BackPage: {Type: Success,Msg: Éxito al volver a la página , Where: BackPage},
+        DragDrop: {Type: Success,Msg: El componente se arrastró con éxito , Where: dragDrop},
+        Clear: {Type: Success,Msg: El campo se borró con éxito , Where: clear},
+        Click: {Type: Success,Msg: Clic exitoso , Where: click},
+        ConvertPDF: {Type: Success,Msg: EST para PDF se crearon , Where: mainFunction},
+        CloseBrowser: {Type: Success,Msg: El navegador se cerró correctamente , Where: close},
+        CloseWindow: {Type: Success,Msg: La ventana se cerró correctamente , Where: close},
+<<<<<<< Updated upstream
+        DoubleClick: {Type: Success,Msg: Doble clic exitoso , Where: doubleClick},
+=======
+        DoubleClick: {Type: Success,Msg: Haga doble clic con éxito , Where: doubleClick},
+>>>>>>> Stashed changes
+        DragDropToElement: {Type: Success,Msg: Fue posible sostener y arrastrar con éxito el componente a otro componente , Where: dragDropToElement},
+        ErrorAccessAzure: {Type: Error,Msg: Error al acceder a Azure DevOps , Where: accessAzure},
+        ErrorBackPage: {Type: Error,Msg: No se pudo volver a la página , Where: BackPage},
+        ErrorExecuteStepByStep: {Type: Error,Msg: Error en la ejecución del paso a paso. , Where: executeStepByStep},
+        ErrorOpenPage: {Type: Error,Msg: Error al acceder a la página , Where: openPage},
+        ErrorAddlog: {Type: Error,Msg: Error al actualizar el registro , Where: addlog},
+        ErrorAlterWindow: {Type: Error,Msg: El enfoque no ha cambiado en la pantalla. , Where: alterWindow},
+        ErrorAttachmentList: {Type: Error,Msg: Error al leer el archivo adjunto del caso de prueba manual , Where: attachmentList},
+        ErrorDragDrop: {Type: Error,Msg: No fue posible sostener y arrastrar el componente , Where: dragDrop},
+        ErrorClick: {Type: Error,Msg: Error al hacer clic en el elemento , Where: click},
+        ErrorClear: {Type: Error,Msg: Error al limpiar el campo , Where: clear},
+        ErrorClose: {Type: Error,Msg: Error al cerrar , Where: close},
+        ErrorConfigureLanguage: {Type: Error,Msg: Hubo un error en la configuración del idioma. , Where: configureLanguage},
+        ErrorConvertPDF: {Type: Error,Msg: No fue posible convertir ETS a PDF , Where: mainFunction},
+        ErrorCore: {Type: Error,Msg: Ha ocurrido un error de aplicación , Where: mainFunction},
+        ErrorCreateDirectory: {Type: Error,Msg: Hubo un error al crear el directorio. , Where: createDirectory},
+        ErrorCreatelog: {Type: Error,Msg: Error al crear el registro , Where: createlog},
+<<<<<<< Updated upstream
+        ErrorDeleteFiles: {Type: Error,Msg: Error al eliminar los archivos. , Where: deleteFiles},
+=======
+        ErrorDeleteFiles: {Type: Error,Msg: Error al eliminar archivos. , Where: deleteFiles},
+>>>>>>> Stashed changes
+        ErrorDoubleClick: {Type: Error,Msg: Error de doble clic en el elemento , Where: doubleClick},
+        ErrorEmptyLine: {Type: Error,Msg: Hay una línea en blanco en el caso de prueba. , Where: ErrorEmptyLine},
+        ErrorEST: {Type: Error,Msg: No fue posible crear el EST , Where: mainFunction},
+        ErrorFillField: {Type: Error,Msg: Error al completar el campo , Where: fillField},
+        ErrorForwardPage: {Type: Error,Msg: Error al avanzar la página , Where: ForwardPage},
+        ErrorFunctionValidateData: {Type: Error,Msg: Error al realizar la validación , Where: validateData},
+        ErrorGenerateHash: {Type: Error,Msg: ¡Error al generar Hash! , Where: generateHash},
+        ErrorGetAttribute: {Type: Error,Msg: ¡Error al obtener el atributo del elemento! , Where: GetAttribute},
+        ErrorGetVariables: {Type: Error,Msg: ¡Error al obtener la masa de prueba! , Where: getVariables},
+        ErrorGetSteps: {Type: Error,Msg: ¡Error al extraer los pasos del caso de prueba! , Where: GetSteps},
+        ErrorGetParameters: {Type: Error,Msg: ¡Error al extraer parámetros del caso de prueba! , Where: getParameters},
+        ErrorGetTestCase: {Type: Warning,Msg: ¡Este conjunto de pruebas no tiene casos de prueba! , Where: getTestCase},
+        ErrorGetTestCaseRun: {Type: Error,Msg: Error al extraer información del caso de prueba manual. , Where: getTestCaseRun},
+        ErrorGetTestPlan: {Type: Warning,Msg: ¡Este proyecto no tiene planes de prueba! , Where: getTestPlans},
+        ErrorGetTestSuit: {Type: Warning,Msg: ¡Este plan de prueba no tiene trajes de prueba! , Where: getTestSuits},
+<<<<<<< Updated upstream
+        ErrorGetText: {Type: Error,Msg: No se pudo obtener el texto del componente y / o la página , Where: getText},
+        ErrorGetTitle: {Type: Error,Msg: ¡No fue posible obtener el título de la página! , Where: GetTitle},
+        ErrorGetURL: {Type: Error,Msg: ¡No fue posible obtener la URL de la página! , Where: GetURL},
+        ErrorInform: {Type: Error,Msg: ¡NO se encontró la pantalla de alerta! , Where: Inform},
+        ErrorIsDisplayed: {Type: Error,Msg: Elemento NO encontrado o imposible de identificar si es visible , Where: isDisplayed},
+=======
+        ErrorGetText: {Type: Error,Msg: No fue posible obtener el texto del componente y / o la página , Where: getText},
+        ErrorGetTitle: {Type: Error,Msg: ¡No fue posible obtener el título de la página! , Where: GetTitle},
+        ErrorGetURL: {Type: Error,Msg: ¡No fue posible obtener la URL de la página! , Where: GetURL},
+        ErrorInform: {Type: Error,Msg: ¡NO se encontró la pantalla de alerta! , Where: Inform},
+        ErrorIsDisplayed: {Type: Error,Msg: Elemento NO ubicado o imposible de identificar si es visible , Where: isDisplayed},
+>>>>>>> Stashed changes
+        ErrorIsEnable: {Type: Error,Msg: Elemento NO encontrado o imposible de identificar su estado , Where: IsEnable},
+        ErrorIsSelected: {Type: Error,Msg: Elemento NO encontrado o imposible de identificar su estado , Where: isSelected},
+        ErrorHighLight: {Type: Error,Msg: No fue posible resaltar el componente , Where: highlight},
+        ErrorInstance: {Type: Warning,Msg: ¡Esta instancia no tiene proyectos! , Where: getProjects},
+        ErrorLoadConfigs: {Type: Error,Msg: Error al cargar la configuración , Where: loadConfigs},
+        ErrorLoadProject: {Type: Error,Msg: ¡Error al cargar proyectos! , Where: getProjects},
+        ErrorLoadTestPlans: {Type: Error,Msg: ¡Error al cargar los planes de prueba! , Where: getTestPlans},
+        ErrorLoadTestSuit: {Type: Error,Msg: Error al cargar el traje de prueba , Where: getTestSuits},
+<<<<<<< Updated upstream
+        ErrorLoadTestCase: {Type: Error,Msg: ¡Error al cargar el caso de prueba! , Where: getTestCases},
+=======
+        ErrorLoadTestCase: {Type: Error,Msg: Error al cargar el caso de prueba. , Where: getTestCases},
+>>>>>>> Stashed changes
+        ErrorLoadTestRun: {Type: Error,Msg: ¡Error al cargar TestRun! , Where: createTestRun},
+        ErrorMain: {Type: Error,Msg: Error al ejecutar Main , Where: main},
+        ErrorMouseOver: {Type: Error,Msg: Objeto NO encontrado en pantalla , Where: mouseOver},
+        ErrorNoExecute: {Type: Error,Msg: Este paso NO se omitió correctamente , Where: noExecute},
+        ErrorOpenBrowser: {Type: Error,Msg: Error al abrir el navegador , Where: openBrowser},
+        ErrorOpenNewTab: {Type: Error,Msg: Error al abrir una pestaña nueva , Where: OpenNewTab},
+        ErrorReadHash: {Type: Error,Msg: Error al leer Hash! , Where: readHash},
+        ErrorRefreshPage: {Type: Error,Msg: Error al actualizar la página , Where: RefreshPage},
+        ErrorRemoveHTML: {Type: Error,Msg: Error al eliminar HTML de la cadena , Where: removeHTML},
+        Error ReplacePasswordEvidence: {Type: Error,Msg: No se pudieron cambiar las contraseñas con asteriscos. , Where: ReplacePasswordEvidence},
+        ErrorRequest: {Type: Error,Msg: ¡Solicitud fallida! , Where: AzureConnection - Geral},
+        ErrorRightClick: {Type: Error,Msg: Error al hacer clic en el elemento , Where: rightClick},
+        ErrorReturnWindow: {Type: Error,Msg: El foco no se ha cambiado a la ventana deseada. , Where: returnWindow},
+        ErrorSaveHash: {Type: Error,Msg: ¡Error al guardar Hash! , Where: saveHash},
+        ErrorSaveManualPrintScreen: {Type: Error,Msg: 'No se pudo guardar la evidencia del caso de prueba manual' , Where: saveManualPrintScreen},
+<<<<<<< Updated upstream
+        ErrorSaveToken: {Type: Error,Msg: No se pudo guardar el token en el archivo , Where: saveToken},
+        ErrorScreenshot: {Type: Error,Msg: No se pudo tomar la captura de pantalla , Where: mainFunction},
+        ErrorSelectDropDownList: {Type: Error,Msg: No fue posible seleccionar DropDownList ,Where: selectDropDownList},
+        ErrorSelectCombobox: {Type: Error,Msg: No fue posible seleccionar el cuadro combinado , Where: selectCombobox},
+        ErrorDragDropToElement: {Type: Error,Msg: No fue posible sostener y arrastrar el componente a otro componente , Where: DragDropToElement},
+=======
+        ErrorSaveToken: {Type: Error,Msg: No fue posible guardar el Token en el archivo. , Where: saveToken},
+        ErrorScreenshot: {Type: Error,Msg: No se pudo tomar la captura de pantalla , Where: mainFunction},
+        ErrorSelectDropDownList: {Type: Error,Msg: No fue posible seleccionar DropDownList ,Where: selectDropDownList},
+        ErrorSelectCombobox: {Type: Error,Msg: No fue posible seleccionar el cuadro combinado , Where: selectCombobox},
+        ErrorDragDropToElement: {Type: Error,Msg: © No fue posible mantener y arrastrar el componente a otro componente , Where: DragDropToElement},
+>>>>>>> Stashed changes
+        ErrorScrollPage: {Type: Error,Msg: Error al desplazarse por la página , Where: ScrollPage},
+        ErrorSizeName: {Type: Error,Msg: El nombre del caso de prueba debe tener menos de 50 caracteres. , Where: validateTestName},
+        ErrorSliceDatas: {Type: Error,Msg: ¡Error al dividir los datos de la masa de prueba! , Where: sliceDatas},
+        ErrorSliceDataBlank: {Type: Error,Msg: Compruebe en Azure. ¡Hay al menos un campo en blanco! , Where: sliceDatas},
+        ErrorSpecialCharacter: {Type: Error,Msg: El nombre del caso de prueba tiene un carácter especial. Por favor cambia. , Where: validateTestName},
+<<<<<<< Updated upstream
+        ErrorStartAutomation: {Type: Error,Msg: ¡Error al realizar los pasos de prueba! , Where: startAutomation},
+=======
+        ErrorStartAutomation: {Type: Error,Msg: ¡Error al realizar los pasos de la prueba! , Where: startAutomation},
+>>>>>>> Stashed changes
+        ErrorStep: {Type: Error,Msg: Error de paso , Where: mainFunction},
+        ErrorStepFor: {Type: Error,Msg: Error al ejecutar los pasos , Where: mainFunction},
+        ErrorPressButton: {Type: Error,Msg: La clave informada no es válida , Where: pressButton},
+        ErrorTakePicture: {Type: Error,Msg: Error al ejecutar PrintScreen desde el paso , Where: takePicture},
+        ErrorTestNameValidation: {Type: Error,Msg: No se pudo validar el nombre del caso de prueba. , Where: validateTestName},
+        ErrorTranslateMessage: {Type: Error,Msg: Error al traducir mensajes , Where: translateMsg},
+        ErrorValidateData: {Type: Error,Msg: Resultado obtenido diferente al resultado esperado , Where: validateData},
+        ErrorVerifyBrowser: {Type: Error,Msg: ¡No fue posible cerrar el navegador! , Where: verifyBrowser},
+<<<<<<< Updated upstream
+        ErrorWordAddInfo: {Type: Error,Msg: Hubo un error al agregar información en Word , Where: wordAddInfo},
+=======
+        ErrorWordAddInfo: {Type: Error,Msg: Se produjo un error al agregar información en Word , Where: wordAddInfo},
+>>>>>>> Stashed changes
+        ErrorWait: {Type: Error,Msg: Se produjo un error al esperar , Where: wait},
+        ErrorWordAddSteps: {Type: Error,Msg: Hubo un error al agregar el paso en Word , Where: wordAddSteps},
+        ErrorWordFindParagraph: {Type: Error,Msg: No fue posible encontrar el párrafo inicial , Where: wordAddSteps},
+        ErrorWordSeachText: {Type: Error,Msg: Se produjo un error al buscar el paso en Word , Where: wordSeachText},
+        ErrorWordToPDF: {Type: Error,Msg: Hubo un error al convertir a PDF , Where: wordToPDF},
+<<<<<<< Updated upstream
+        EvidenceFolder: {Type: Success,Msg: El directorio de pruebas se creó correctamente. , Where: createDirectory},
+=======
+        EvidenceFolder: {Type: Success,Msg: El directorio de pruebas se ha creado correctamente. , Where: createDirectory},
+>>>>>>> Stashed changes
+        FindElement: {Type: Success,Msg: encontré el componente para informar , Where: findElement},
+        FillField: {Type: Success,Msg: El campo se llenó con éxito , Where: fillField},
+        ForwardPage: {Type: Success,Msg: La página ha avanzado con éxito , Where: ForwardPage},
+        GetAttribute: {Type: Success,Msg: Éxito en la obtención del atributo del elemento , Where: GetAttribute},
+        GetInfoRun: {Type: Success,Msg: ¡Comentarios de ejecución leídos correctamente! , Where: getInfoRun},
+        GetParameters: {Type: Success,Msg: ¡Éxito en la extracción de parámetros del caso de prueba! , Where: getParameters},
+        GetSteps: {Type: Success,Msg: ¡Éxito en la extracción de pasos del caso de prueba! , Where: getSteps},
+        GetText: {Type: Success,Msg: Éxito en la obtención del texto de la página , Where: getText},
+        GetTestCaseRun: {Type: Success,Msg: ¡Éxito en la extracción de información del caso de prueba manual! , Where: getTestCaseRun},
+        GetTitle: {Type: Success,Msg: Éxito en la obtención del título de la página , Where: GetTitle},
+        GetURL: {Type: Success,Msg: Éxito en la obtención de la URL de la página , Where: GetURL},
+        GetVariables: {Type: Success,Msg: ¡Éxito en la obtención de la masa de prueba! , Where: GetVariables},
+        Inform: {Type: Success,Msg: ¡La pantalla de alerta se encontró correctamente! , Where: Inform},
+        IsDisplayed: {Type: Success,Msg: Elemento localizado , Where: isDisplayed},
+        IsEnable: {Type: Success,Msg: Elemento localizado , Where: IsEnable},
+        IsSelected: {Type: Success,Msg: Elemento localizado , Where: isSelected},
+        LoadExecuteTest: {Type: Success,Msg: ¡Éxito al cargar la ejecución del caso de prueba! , Where: executeTestCase},
+        NoExecute: {Type: Success,Msg: Este paso se omitió con éxito , Where: noExecute},
+        MouseOver: {Type: Success,Msg: El mouse se movió con éxito , Where: mouseOver},
+        OpenBrowser: {Type: Success,Msg: El navegador se abrió correctamente , Where: openBrowser},
+        OpenNewTab: {Type: Success,Msg: Pestaña abierta con éxito , Where: OpenNewTab},
+        PressButton: {Type: Success,Msg: Botón presionado , Where: pressButton},
+        RefreshPage: {Type: Success,Msg: Página actualizada , Where: RefreshPage},
+        ReturnWindow: {Type: Success,Msg: El foco se ha cambiado a la ventana deseada. , Where: returnWindow},
+        RightClick: {Type: Success,Msg: Haga clic en el botón derecho con éxito , Where: rightClick},
+        SaveEvidenceRun: {Type: Success,Msg: Evidencia adjunta con éxito a Run! , Where: SaveEvidenceRun},
+        SaveEvidenceTestCaseID: {Type: Success,Msg: ¡Enlace de prueba de prueba creado correctamente! , Where: SaveEvidenceTestCaseID},
+        SaveEvidenceTestCaseFile: {Type: Success,Msg: Evidencia adjunta con éxito a la edición de Test! , Where: SaveEvidenceTestCaseFile},
+        SaveManualPrintScreen: {Type: Success,Msg: Éxito en guardar la evidencia de este paso , Where: saveManualPrintScreen},
+        SaveToken: {Type: Success,Msg: ¡El token se registró correctamente! , Where: saveToken},
+        ScrollPage: {Type: Success,Msg: El comando para desplazarse por la página se ha ejecutado con éxito , Where: ScrollPage},
+        SelectDropDownList: {Type: Success,Msg: Elemento seleccionado en DropDownList , Where: selectDropDownList},
+        SliceDatas: {Type: Success,Msg: ¡Éxito en la división de los datos de la masa de prueba! , Where: sliceDatas},
+        StatusIDTestCase: {Type: Success,Msg: ¡Se ha consultado correctamente el ID del punto de caso de prueba! , Where: createTestRun},
+        StatusRun: {Type: Success,Msg: ¡El estado de ejecución se ha actualizado correctamente! , Where: updateRun},
+        StatusTestCase: {Type: Success,Msg: ¡Caso de prueba consultado con éxito! , Where: createTestRun - TestRun},
+        TakePicture: {Type: Success,Msg: PrintScreen realizado correctamente , Where: takePicture},
+        TestCaseFinished: {Type: Log,Msg: ¡Caso de prueba terminado! , Where: mainFunction},
+<<<<<<< Updated upstream
+        UpdateTestCaseRun: {Type: Success,Msg: El estado del caso de prueba se actualizó correctamente. , Where: updateTestCaseRun},
+        ValidateData: {Type: Success,Msg: Datos validados con éxito , Where: validateData},
+        ValidateDataExpected: {Type: Log,Msg: Texto esperado , Where: validateDataExpected},
+        ValidateDataObtained: {Type: Log,Msg: Texto obtenido , Where: validateDataObtained},
+        Wait: {Type: Success,Msg: Esperó con éxito la hora solicitada , Where: wait},
+=======
+        UpdateTestCaseRun: {Type: Success,Msg: ¡El estado del caso de prueba se actualizó correctamente! , Where: updateTestCaseRun},
+        ValidateData: {Type: Success,Msg: Datos validados con éxito , Where: validateData},
+        ValidateDataExpected: {Type: Log,Msg: Texto esperado , Where: validateDataExpected},
+        ValidateDataObtained: {Type: Log,Msg: Texto obtenido , Where: validateDataObtained},
+        Wait: {Type: Success,Msg: Esperó la hora solicitada con éxito , Where: wait},
+>>>>>>> Stashed changes
+        WarningEvidenceFolder: {Type: Warning,Msg: La evidencia NO ha sido actualizada , Where: createDirectory},
+        WarningFindElement: {Type: Warning,Msg: NO se encontró el componente para informar , Where: findElement}
+    }
+
+#Folder list.
+directories:
+    {
+        ConfigFolder: Automation\configs,
+        HashFolder: C:\Ibope\Repository\Automation\Hash,
+        LogFolder: C:\Ibope\Repository\Automation\Logs,
+        EvidenceFolder: C:\Ibope\Repository\Automation\Evidences,
+        EvidenceFolderManual: C:\Ibope\Repository\Automation\Evidences\Manual,
+        ESTFile: Automation\evidence\ETS - ,
+        TokensFile: C:\Ibope\Repository\Automation\Tokens,
+        WebDriverChrome: Automation\drivers\Chrome32Bits.exe,
+        WebDriverFirefox: Automation\drivers\Firefox.exe,
+        WebDriverEdge: Automation\drivers\MSEdge64Bits.exe,
+        WebDriverEdgeLegacy: Automation\drivers\MSEdgeLegacy-v16.exe,
+        WebDriverIE: Automation\drivers\IE32bits.exe
+    }
+
+# List of other configurations.
+otherConfigs:
+    {
+        Agent: 'Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion Chrome/24.0.1312.27 Safari/537.17 Mozilla/5.0 CK={} (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
+<<<<<<< Updated upstream
+        AskRunID: {Type: Info,Msg: 'Por favor ingrese el ID de ejecución:' , Where: generateManualEvidence},
+=======
+        AskRunID: {Type: Info,Msg: 'Introduzca el ID de ejecución:' , Where: generateManualEvidence},
+>>>>>>> Stashed changes
+        Browser: '',
+        ComputerName: '',
+        ChooseOption: {Type: Info,Msg: 'Ingrese una opción:' , Where: AutomationCore_Azure},
+        EvidenceName: Screenshot_,
+        EvidenceExtension: .png,
+        EvidenceWidth: Inches(6.0),
+        EvidenceHeight: Inches(3.8),
+<<<<<<< Updated upstream
+        EvidenceQuestion: {Type: Info,Msg: 'Desea registrar evidencia localmente y en Azure. [Y / s] = Sí o [N / n] = No? ' , Where: AutomationCore_Azure},
+=======
+        EvidenceQuestion: {Type: Info,Msg: 'Desea registrar evidencia localmente y en Azure. [S / s] = Sí o [N / n] = No? ' , Where: AutomationCore_Azure},
+        ExecutionPath: {Type: Info,Msg: '¡Atención! Para ejecutarse en la computadora local, la automatización debe estar en la unidad C: , no pipeline serÃ¡ executado em outra unidade.', Where: AutomationCore_Azure},
+>>>>>>> Stashed changes
+        ETSName: CT,
+        ETSExtension: .docx,
+        GeneratingEvidence: {Type: Info,Msg: Generando archivo de evidencia ... , Where: AutomationCore_Azure},
+        GetParameters: {Type: Info,Msg: ¡Error al extraer parámetros del caso de prueba! , Where: AutomationCore_Azure},
+        GetTestSuit: {Type: Info,Msg: ¡Este plan de prueba no tiene trajes de prueba! , Where: AutomationCore_Azure},
+        HttpBasicAuth: '',
+        IDRunInvalid: {Type: Info,Msg: No se encontró la ejecución de ID , Where: getTestCaseRun},
+        InformTokenPart1: {Type: Info,Msg: Introduzca su token de Azure DevOps. , Where: AutomationCore_Azure},
+<<<<<<< Updated upstream
+        InformTokenPart2: {Type: Info,Msg: 'Para generarlo, accede al enlace https://kantarware.visualstudio.com/_usersSettings/tokens' , Where: AutomationCore_Azure},
+=======
+        InformTokenPart2: {Type: Info,Msg: 'Para generarlo acceda al enlace https://kantarware.visualstudio.com/_usersSettings/tokens' , Where: AutomationCore_Azure},
+>>>>>>> Stashed changes
+        Language: '',
+        NoAction: {Type: Info,Msg: 'No' , Where: AutomationCore_Azure},
+        NoEvidences: {Type: Info,Msg: No hay imágenes para esta prueba o no se ha realizado alguna iteración. , Where: azureConnection},
+        NoExecutions: {Type: Info,Msg: No hay carreras para esta prueba , Where: azureConnection},
+        NoTranslating: 'The messages were not changed. A new translation was not necessary ',
+        OptionInvalid: {Type: Info,Msg: no es una opcion valida , Where: azureConnection},
+        ProjectList: {Type: Info,Msg: Lista de proyectos , Where: azureConnection},
+        RequestOK: {Type: Info,Msg: Solicitud exitosa! , Where: azureConnection},
+        ReplaceEvidence: '',
+        Exit: {Type: Info,Msg: Cerrar el menú , Where: azureConnection},
+<<<<<<< Updated upstream
+        StatusIDTestCase: {Type: Info,Msg: ID de punto de caso de prueba consultado correctamente , Where: azureConnection},
+        StatusTestCase: {Type: Info,Msg: Caso de prueba consultado con éxito , Where: azureConnection},
+        Step: {Type: Info,Msg: PASO , Where: AutomationCore_Azure},
+        StepName: Step,
+        StepNotFound: {Type: Info,Msg: No se pudo realizar este paso. , Where: AutomationCore_Azure},
+=======
+        StatusIDTestCase: {Type: Info,Msg: El ID del punto de caso de prueba se consultó correctamente , Where: azureConnection},
+        StatusTestCase: {Type: Info,Msg: Caso de prueba consultado con éxito , Where: azureConnection},
+        Step: {Type: Info,Msg: PASO , Where: AutomationCore_Azure},
+        StepName: Step,
+        StepNotFound: {Type: Info,Msg: ¡No se pudo realizar este paso! , Where: AutomationCore_Azure},
+>>>>>>> Stashed changes
+        Summary: {Type: Info,Msg: Este caso de prueba no tiene información adicional. , Where: AutomationCore_Azure},
+        TestCaseList: {Type: Info,Msg: 'Lista de casos de prueba:' , Where: azureConnection},
+        TestPlanList: {Type: Info,Msg: 'Lista de planes de prueba:' , Where: azureConnection},
+        TestSuitList: {Type: Info,Msg: 'Lista de conjuntos de pruebas:' , Where: azureConnection},
+        TranslateMessage: 'Messages translated with success!',
+        Translating: 'Please wait, the translation is running. It could take some minutes...',
+        Token: '',
+        Verb: {Type: Info,Msg: VERBO , Where: AutomationCore_Azure},
+        WordParagraph: {Type: Info,Msg: 'Evidencia de pasos' , Where: automationAux}
+    }

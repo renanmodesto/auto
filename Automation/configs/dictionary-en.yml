@@ -1,0 +1,329 @@
+# Verbs list..
+verbs:
+    {
+        # Portuguese Verbs.
+        Abrir: Func.openNewTab,                         # Open new tab
+        Alternar: Func.alterWindow,                     # Altern in two web windows.
+        Alterar: Func.alterWindow,                      # Altern in two web windows.
+        Aguardar: Func.wait,                            # Wait time to execute next step.
+        Apagar: Func.clear,                             # Clear field data
+        Arrastar: Func.dragDrop,                        # Drag and drop element to a X,Y position. - Sintaxe: Component, x:<pixel position>, y:<pixel position>
+        Acessar: Func.openPage,                         # Access a page address.
+        Atualizar: Func.refreshPage,                    # Reload the page
+        Avançar: Func.forwardPage,                      # Goes one step forward in the browser history
+        Clicar: Func.click,                             # Click in a component.
+        Duplo: Func.doubleClick,                        # Double click in a component.
+        Fechar: Func.close,                             # Close. (Blank=Close window / Filled=Close browser).
+        Informar: Func.inform,                          # Choose a option in a browser alert.
+        Mover: Func.mouseOver,                          # Move the mouse over an element.
+        Navegar: Func.openBrowser,                      # Open the browser.
+        Preencher: Func.fillField,                      # Type a text.
+        Pressionar: Func.rightClick,                    # Right click of the mouse.
+        Retornar: Func.returnWindow,                    # Return to the main browser window.
+        Rolar: Func.scrollPage,                         # Scroll the page on the Y axis
+        Segurar: Func.dragDropToElement,                # Drag and drop component to another. - Sintaxe: From component, To component.
+        Selecionar: Func.selectDropDownList,            # Select an item in a dropdownlist.
+        Teclar: Func.pressButton,                       # Type an especific button in keyboard (Example: ESC, TAB, F1)
+        Validar: Func.validateData,                     # Get a component text and compare with expected.
+        Voltar: Func.backPage,                          # Goes one step backward in the browser history
+        NoExecute: Func.noExecute,                      # Don't execute the step that starts with the word "No" or "Não". ALWAYS in a variable.
+
+        # Spanish Verbs.
+        # Abrir: Func.openNewTab, -> Equal Portuguese   # Open new tab
+        Cambiar: Func.alterWindow,                      # Altern in two web windows.
+        Esperar: Func.wait,                             # Wait time to execute next step.
+        Limpiar: Func.clear,                            # Clear field data
+        # Arrastar -> Equal Portuguese                  # Drag and drop element to a X,Y position. - Sintaxe: Component, x:<pixel position>, y:<pixel position>
+        Acceder: Func.openPage,                         # Access a page address.
+        Actualizar: Func.refreshPage,                   # Reload the page
+        Avanzar: Func.forwardPage,                      # Goes one step forward in the browser history
+        # Clicar  -> Equal Portuguese                   # Click in a component.
+        DobleClic: Func.doubleClick,                    # Double click in a component.
+        Cerrar: Func.close,                             # Close. (Blank=Close window / Filled=Close browser).
+        Elegir: Func.inform,                            # Choose an option in a browser alert.
+        # Mover -> Equal Portuguese                     # Move the mouse over an element.
+        # Navegar -> Equal Portuguese                   # Open the browser.
+        Llenar: Func.fillField,                         # Type a text.
+        Presionar: Func.rightClick,                     # Right click of the mouse.
+        # Retornar -> Equal Portuguese                  # Return to the main browser window.
+        Desplazamiento: Func.scrollPage,                # Scroll the page on the Y axis
+        Sostener: Func.dragDropToElement,               # Drag and drop component to another. - Sintaxe: From component, To component.
+        # Selecionar -> Equal Portuguese                # Select an item in a dropdownlist.
+        # Teclar -> Equal Portuguese                    # Type an especific button in keyboard (Example: ESC, TAB, F1)
+        # Validar -> Equal Portuguese                   # Get a component text and compare with expected.
+        Retroceder: Func.backPage,                      # Goes one step backward in the browser history
+        # NoExecute -> Func.noExecute                   # Don't execute the step that starts with the word "No" or "Não". ALWAYS in a variable.
+
+        # English Verbs.
+        Open: Func.openNewTab,                          # Open new tab
+        Switch: Func.alterWindow,                       # Altern in two web windows.
+        Wait: Func.wait,                                # Wait time to execute next step.
+        Clear: Func.clear,                              # Clear field data
+        Drag: Func.dragDrop,                            # Drag and drop element to a X,Y position. - Sintaxe: Component, x:<pixel position>, y:<pixel position>
+        Access: Func.openPage,                          # Access a page address.
+        Refresh: Func.refreshPage,                      # Reload the page
+        Forwar: Func.forwardPage,                       # Goes one step forward in the browser history
+        Click: Func.click,                              # Click in a component.
+        Double: Func.doubleClick,                       # Double click in a component.
+        Close: Func.close,                              # Close. (Blank=Close window / Filled=Close browser).
+        Inform: Func.inform,                            # Choose a option in a browser alert.
+        Move: Func.mouseOver,                           # Move the mouse over an element.
+        Navegate: Func.openBrowser,                     # Open the browser.
+        Fill: Func.fillField,                           # Type a text.
+        Right: Func.rightClick,                         # Right click of the mouse.
+        Return: Func.returnWindow,                      # Return to the main browser window.
+        Scroll: Func.scrollPage,                        # Scroll the page on the Y axis
+        Hold: Func.dragDropToElement,                   # Drag and drop component to another. - Sintaxe: From component, To component.
+        Select: Func.selectDropDownList,                # Select an item in a dropdownlist.
+        Press: Func.pressButton,                        # Type an especific button in keyboard (Example: ESC, TAB, F1)
+        Validate: Func.validateData,                    # Get a component text and compare with expected.
+        Back: Func.backPage,                            # Goes one step backward in the browser history
+        # NoExecute -> Func.noExecute                   # Don't execute the step that starts with the word "No" or "Não". ALWAYS in a variable.
+    }
+#List to search the elements. Try to find following the order below.
+searchElements:
+    {
+        searchByID: searchElementByID,
+        searchByName: searchElementByName,
+        searchByXpath: searchElementByXpath,
+        searchByiFrame: searchElementByiFrame,
+        searchByLinkText: searchElementByLinkText,
+        searchByParcialLinkText: searchElementByParcialLinkText,
+        searchByTagName: searchElementByTagName,
+        searchByClassName: searchElementByClassName,
+        searchByCSS: searchElementByCSS
+    }
+#List to search the elements attributes to the GetText (Text validation).
+#IMPORTANT: Add new lines if necessary.
+searchForAttribute:
+    {
+        buscarPorID: id,
+        buscarPorNome: name,
+        buscarPorClass: class,
+        buscarPorHREF: a,
+        buscarPorSize: size
+    }
+#List to search the elements to the GetText (Text validation).
+#IMPORTANT: Add new lines if necessary.
+searchForComponent:
+    {
+        buscarPorDiv: div,
+        buscarPorTD: td,
+        buscarPorTR: tr
+    }
+
+#List of logs.
+logs:
+    {
+        AccessAzure: {Type: Success,Msg: Successful access to Azure DevOps , Where: accessAzure},
+        OpenPage: {Type: Success,Msg: Access to the page successfully , Where: openPage},
+        ActionStart: {Type: Log,Msg: Start of the automation execution , Where: createLog},
+        AlterWindow: {Type: Success,Msg: The focus of the screen has changed , Where: alterWindow},
+        AttachmentList: {Type: Sucesso,Msg: Success in reading the manual test case attachment , Where: attachmentList},
+        BackPage: {Type: Success,Msg: Success when returning to page , Where: BackPage},
+        DragDrop: {Type: Success,Msg: The component was successfully dragged , Where: dragDrop},
+        Clear: {Type: Success,Msg: The field was successfully cleared , Where: clear},
+        Click: {Type: Success,Msg: Successful click , Where: click},
+        ConvertPDF: {Type: Success,Msg: EST for PDF were created , Where: mainFunction},
+        CloseBrowser: {Type: Success,Msg: The browser was closed successfully , Where: close},
+        CloseWindow: {Type: Success,Msg: The window was successfully closed , Where: close},
+        DoubleClick: {Type: Success,Msg: Double click successful , Where: doubleClick},
+        DragDropToElement: {Type: Success,Msg: It was possible to successfully hold and drag the component to another component , Where: dragDropToElement},
+        ErrorAccessAzure: {Type: Error,Msg: Failed to access Azure DevOps , Where: accessAzure},
+        ErrorBackPage: {Type: Error,Msg: Failed to return to page , Where: BackPage},
+        ErrorExecuteStepByStep: {Type: Error,Msg: Error in the execution of the step by step. , Where: executeStepByStep},
+        ErrorOpenPage: {Type: Error,Msg: Error accessing page , Where: openPage},
+        ErrorAddlog: {Type: Error,Msg: Error in updating the log , Where: addlog},
+        ErrorAlterWindow: {Type: Error,Msg: The focus has not changed on the screen , Where: alterWindow},
+        ErrorAttachmentList: {Type: Error,Msg: Error reading manual test case attachment , Where: attachmentList},
+        ErrorDragDrop: {Type: Error,Msg: It was not possible to hold and drag the component , Where: dragDrop},
+        ErrorClick: {Type: Error,Msg: Error clicking element , Where: click},
+        ErrorClear: {Type: Error,Msg: Error while clearing the field , Where: clear},
+        ErrorClose: {Type: Error,Msg: Error closing , Where: close},
+        ErrorConfigureLanguage: {Type: Error,Msg: There was an error in the language setting , Where: configureLanguage},
+        ErrorConvertPDF: {Type: Error,Msg: It was not possible to convert ETS to PDF , Where: mainFunction},
+        ErrorCore: {Type: Error,Msg: An application error has occurred , Where: mainFunction},
+        ErrorCreateDirectory: {Type: Error,Msg: There was an error creating the directory , Where: createDirectory},
+        ErrorCreatelog: {Type: Error,Msg: Error creating the log , Where: createlog},
+        ErrorDeleteFiles: {Type: Error,Msg: Error deleting the files. , Where: deleteFiles},
+        ErrorDoubleClick: {Type: Error,Msg: Double-click error on the element , Where: doubleClick},
+        ErrorEmptyLine: {Type: Error,Msg: There is a blank line in the test case , Where: ErrorEmptyLine},
+        ErrorEST: {Type: Error,Msg: It was not possible to create the EST , Where: mainFunction},
+        ErrorFillField: {Type: Error,Msg: Error filling field , Where: fillField},
+        ErrorForwardPage: {Type: Error,Msg: Error advancing the page , Where: ForwardPage},
+        ErrorFunctionValidateData: {Type: Error,Msg: Error while performing validation , Where: validateData},
+        ErrorGenerateHash: {Type: Error,Msg: Error generating Hash! , Where: generateHash},
+        ErrorGetAttribute: {Type: Error,Msg: Error getting element attribute! , Where: GetAttribute},
+        ErrorGetVariables: {Type: Error,Msg: Error in obtaining the test mass! , Where: getVariables},
+        ErrorGetSteps: {Type: Error,Msg: Error extracting steps from the test case! , Where: GetSteps},
+        ErrorGetParameters: {Type: Error,Msg: Error extracting parameters from the test case! , Where: getParameters},
+        ErrorGetTestCase: {Type: Warning,Msg: This test suite has no test cases! , Where: getTestCase},
+        ErrorGetTestCaseRun: {Type: Error,Msg: Error extracting information from the manual test case! , Where: getTestCaseRun},
+        ErrorGetTestPlan: {Type: Warning,Msg: This project has no test plans! , Where: getTestPlans},
+        ErrorGetTestSuit: {Type: Warning,Msg: This test plan does not have test suits! , Where: getTestSuits},
+        ErrorGetText: {Type: Error,Msg: Could not get the text of the component and / or the page , Where: getText},
+        ErrorGetTitle: {Type: Error,Msg: It was not possible to obtain the title of the page! , Where: GetTitle},
+        ErrorGetURL: {Type: Error,Msg: It was not possible to obtain the URL of the page! , Where: GetURL},
+        ErrorInform: {Type: Error,Msg: The alert screen was NOT found! , Where: Inform},
+        ErrorIsDisplayed: {Type: Error,Msg: Element NOT found or impossible to identify if it is visible , Where: isDisplayed},
+        ErrorIsEnable: {Type: Error,Msg: Element NOT found or impossible to identify its status , Where: IsEnable},
+        ErrorIsSelected: {Type: Error,Msg: Element NOT found or impossible to identify its status , Where: isSelected},
+        ErrorHighLight: {Type: Error,Msg: It was not possible to highlight the component , Where: highlight},
+        ErrorInstance: {Type: Warning,Msg: This instance has no projects! , Where: getProjects},
+        ErrorLoadConfigs: {Type: Error,Msg: Error loading settings , Where: loadConfigs},
+        ErrorLoadProject: {Type: Error,Msg: Error loading projects! , Where: getProjects},
+        ErrorLoadTestPlans: {Type: Error,Msg: Error loading testplans! , Where: getTestPlans},
+        ErrorLoadTestSuit: {Type: Error,Msg: Error loading test suit , Where: getTestSuits},
+        ErrorLoadTestCase: {Type: Error,Msg: Error loading the test case! , Where: getTestCases},
+        ErrorLoadTestRun: {Type: Error,Msg: Error loading TestRun! , Where: createTestRun},
+        ErrorMain: {Type: Error,Msg: Error when running Main , Where: main},
+        ErrorMouseOver: {Type: Error,Msg: Object NOT found on screen , Where: mouseOver},
+        ErrorNoExecute: {Type: Error,Msg: This step was NOT successfully skipped , Where: noExecute},
+        ErrorOpenBrowser: {Type: Error,Msg: Error opening browser , Where: openBrowser},
+        ErrorOpenNewTab: {Type: Error,Msg: Error opening new tab , Where: OpenNewTab},
+        ErrorReadHash: {Type: Error,Msg: Error reading Hash! , Where: readHash},
+        ErrorRefreshPage: {Type: Error,Msg: Error updating page , Where: RefreshPage},
+        ErrorRemoveHTML: {Type: Error,Msg: Error removing HTML from string , Where: removeHTML},
+        Error ReplacePasswordEvidence: {Type: Error,Msg: Failed to change passwords with asterisks! , Where: ReplacePasswordEvidence},
+        ErrorRequest: {Type: Error,Msg: Request failed! , Where: AzureConnection - Geral},
+        ErrorRightClick: {Type: Error,Msg: Error clicking element , Where: rightClick},
+        ErrorReturnWindow: {Type: Error,Msg: The focus has not been changed to the desired window , Where: returnWindow},
+        ErrorSaveHash: {Type: Error,Msg: Error saving Hash! , Where: saveHash},
+        ErrorSaveManualPrintScreen: {Type: Error,Msg: 'Failed to save evidence from manual test case' , Where: saveManualPrintScreen},
+        ErrorSaveToken: {Type: Error,Msg: Couldn't save Token to file , Where: saveToken},
+        ErrorScreenshot: {Type: Error,Msg: Couldn't take screenshot , Where: mainFunction},
+        ErrorSelectDropDownList: {Type: Error,Msg: It was not possible to select the DropDownList ,Where: selectDropDownList},
+        ErrorSelectCombobox: {Type: Error,Msg: It was not possible to select the combobox , Where: selectCombobox},
+        ErrorDragDropToElement: {Type: Error,Msg: It was not possible to hold and drag the component to another component , Where: DragDropToElement},
+        ErrorScrollPage: {Type: Error,Msg: Error while scrolling the page , Where: ScrollPage},
+        ErrorSizeName: {Type: Error,Msg: The test case name must be less than 50 characters. , Where: validateTestName},
+        ErrorSliceDatas: {Type: Error,Msg: Error when splitting the test mass data! , Where: sliceDatas},
+        ErrorSliceDataBlank: {Type: Error,Msg: Check in Azure. There is at least one blank field! , Where: sliceDatas},
+        ErrorSpecialCharacter: {Type: Error,Msg: The name of the test case has a special character. Please change. , Where: validateTestName},
+        ErrorStartAutomation: {Type: Error,Msg: Error while performing the test steps! , Where: startAutomation},
+        ErrorStep: {Type: Error,Msg: Step error , Where: mainFunction},
+        ErrorStepFor: {Type: Error,Msg: Error in executing the steps , Where: mainFunction},
+        ErrorPressButton: {Type: Error,Msg: The informed key is invalid , Where: pressButton},
+        ErrorTakePicture: {Type: Error,Msg: Error when running PrintScreen from step , Where: takePicture},
+        ErrorTestNameValidation: {Type: Error,Msg: Failed to validate the test case name. , Where: validateTestName},
+        ErrorTranslateMessage: {Type: Error,Msg: Error while translating messages , Where: translateMsg},
+        ErrorValidateData: {Type: Error,Msg: Result obtained different from the expected result , Where: validateData},
+        ErrorVerifyBrowser: {Type: Error,Msg: It was not possible to close the browser! , Where: verifyBrowser},
+        ErrorWordAddInfo: {Type: Error,Msg: There was an error adding information in Word , Where: wordAddInfo},
+        ErrorWait: {Type: Error,Msg: An error occurred on Wait , Where: wait},
+        ErrorWordAddSteps: {Type: Error,Msg: There was an error adding the step in Word , Where: wordAddSteps},
+        ErrorWordFindParagraph: {Type: Error,Msg: It was not possible to find the initial paragraph , Where: wordAddSteps},
+        ErrorWordSeachText: {Type: Error,Msg: An error occurred while searching for the step in Word , Where: wordSeachText},
+        ErrorWordToPDF: {Type: Error,Msg: There was an error converting to PDF , Where: wordToPDF},
+        EvidenceFolder: {Type: Success,Msg: The evidence directory was created successfully. , Where: createDirectory},
+        FindElement: {Type: Success,Msg: found the component to inform , Where: findElement},
+        FillField: {Type: Success,Msg: The field was successfully filled , Where: fillField},
+        ForwardPage: {Type: Success,Msg: The page has successfully advanced , Where: ForwardPage},
+        GetAttribute: {Type: Success,Msg: Success in obtaining the element attribute , Where: GetAttribute},
+        GetInfoRun: {Type: Success,Msg: Execution comments read successfully! , Where: getInfoRun},
+        GetParameters: {Type: Success,Msg: Success in extracting parameters from the test case! , Where: getParameters},
+        GetSteps: {Type: Success,Msg: Success in extracting steps from the test case! , Where: getSteps},
+        GetText: {Type: Success,Msg: Success in getting page text , Where: getText},
+        GetTestCaseRun: {Type: Success,Msg: Success in extracting information from the manual test case! , Where: getTestCaseRun},
+        GetTitle: {Type: Success,Msg: Success in obtaining the page title , Where: GetTitle},
+        GetURL: {Type: Success,Msg: Success in obtaining the page URL , Where: GetURL},
+        GetVariables: {Type: Success,Msg: Success in obtaining the test mass! , Where: GetVariables},
+        Inform: {Type: Success,Msg: The alert screen was found successfully! , Where: Inform},
+        IsDisplayed: {Type: Success,Msg: Localized element , Where: isDisplayed},
+        IsEnable: {Type: Success,Msg: Localized element , Where: IsEnable},
+        IsSelected: {Type: Success,Msg: Localized element , Where: isSelected},
+        LoadExecuteTest: {Type: Success,Msg: Success in loading the test case execution! , Where: executeTestCase},
+        NoExecute: {Type: Success,Msg: This step was successfully skipped , Where: noExecute},
+        MouseOver: {Type: Success,Msg: The mouse was moved successfully , Where: mouseOver},
+        OpenBrowser: {Type: Success,Msg: Browser opened successfully , Where: openBrowser},
+        OpenNewTab: {Type: Success,Msg: Tab opened successfully , Where: OpenNewTab},
+        PressButton: {Type: Success,Msg: Button pressed , Where: pressButton},
+        RefreshPage: {Type: Success,Msg: Updated page , Where: RefreshPage},
+        ReturnWindow: {Type: Success,Msg: The focus has been changed to the desired window , Where: returnWindow},
+        RightClick: {Type: Success,Msg: Click on the right button successfully , Where: rightClick},
+        SaveEvidenceRun: {Type: Success,Msg: Evidence successfully attached to Run! , Where: SaveEvidenceRun},
+        SaveEvidenceTestCaseID: {Type: Success,Msg: Test evidence link successfully created! , Where: SaveEvidenceTestCaseID},
+        SaveEvidenceTestCaseFile: {Type: Success,Msg: Evidence successfully attached to the issue of Test! , Where: SaveEvidenceTestCaseFile},
+        SaveManualPrintScreen: {Type: Success,Msg: Success in saving the evidence from this step , Where: saveManualPrintScreen},
+        SaveToken: {Type: Success,Msg: Token was successfully recorded! , Where: saveToken},
+        ScrollPage: {Type: Success,Msg: The command to scroll the page has been successfully executed , Where: ScrollPage},
+        SelectDropDownList: {Type: Success,Msg: Selected item in DropDownList , Where: selectDropDownList},
+        SliceDatas: {Type: Success,Msg: Success in breaking up the data from the test mass! , Where: sliceDatas},
+        StatusIDTestCase: {Type: Success,Msg: Test case point ID consulted successfully! , Where: createTestRun},
+        StatusRun: {Type: Success,Msg: Run status has been updated successfully! , Where: updateRun},
+        StatusTestCase: {Type: Success,Msg: Test case consulted successfully! , Where: createTestRun - TestRun},
+        TakePicture: {Type: Success,Msg: PrintScreen successfully done , Where: takePicture},
+        TestCaseFinished: {Type: Log,Msg: Test case finished! , Where: mainFunction},
+        UpdateTestCaseRun: {Type: Success,Msg: Test case status updated successfully! , Where: updateTestCaseRun},
+        ValidateData: {Type: Success,Msg: Data validated successfully , Where: validateData},
+        ValidateDataExpected: {Type: Log,Msg: Expected text , Where: validateDataExpected},
+        ValidateDataObtained: {Type: Log,Msg: Obtained text , Where: validateDataObtained},
+        Wait: {Type: Success,Msg: Waited for the requested time successfully , Where: wait},
+        WarningEvidenceFolder: {Type: Warning,Msg: The evidence has NOT been updated , Where: createDirectory},
+        WarningFindElement: {Type: Warning,Msg: NOT found the component to report , Where: findElement}
+    }
+
+#Folder list.
+directories:
+    {
+        ConfigFolder: Automation\configs,
+        HashFolder: C:\Ibope\Repository\Automation\Hash,
+        LogFolder: C:\Ibope\Repository\Automation\Logs,
+        EvidenceFolder: C:\Ibope\Repository\Automation\Evidences,
+        EvidenceFolderManual: C:\Ibope\Repository\Automation\Evidences\Manual,
+        ESTFile: Automation\evidence\ETS - ,
+        TokensFile: C:\Ibope\Repository\Automation\Tokens,
+        WebDriverChrome: Automation\drivers\Chrome32Bits.exe,
+        WebDriverFirefox: Automation\drivers\Firefox.exe,
+        WebDriverEdge: Automation\drivers\MSEdge64Bits.exe,
+        WebDriverEdgeLegacy: Automation\drivers\MSEdgeLegacy-v16.exe,
+        WebDriverIE: Automation\drivers\IE32bits.exe
+    }
+
+# List of other configurations.
+otherConfigs:
+    {
+        Agent: 'Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion Chrome/24.0.1312.27 Safari/537.17 Mozilla/5.0 CK={} (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
+        AskRunID: {Type: Info,Msg: 'Please enter the Run ID:' , Where: generateManualEvidence},
+        Browser: '',
+        ComputerName: '',
+        ChooseOption: {Type: Info,Msg: 'Enter an option:' , Where: AutomationCore_Azure},
+        EvidenceName: Screenshot_,
+        EvidenceExtension: .png,
+        EvidenceWidth: Inches(6.0),
+        EvidenceHeight: Inches(3.8),
+        EvidenceQuestion: {Type: Info,Msg: 'You want to record evidence locally and on Azure. [Y / s] = Yes or [N / n] = No? ' , Where: AutomationCore_Azure},
+        ETSName: CT,
+        ETSExtension: .docx,
+        GeneratingEvidence: {Type: Info,Msg: Generating evidence file ... , Where: AutomationCore_Azure},
+        GetParameters: {Type: Info,Msg: Error extracting parameters from the test case! , Where: AutomationCore_Azure},
+        GetTestSuit: {Type: Info,Msg: This test plan does not have test suits! , Where: AutomationCore_Azure},
+        HttpBasicAuth: '',
+        IDRunInvalid: {Type: Info,Msg: ID Run was not found , Where: getTestCaseRun},
+        InformTokenPart1: {Type: Info,Msg: Please enter your Azure DevOps token. , Where: AutomationCore_Azure},
+        InformTokenPart2: {Type: Info,Msg: 'To generate it, access the link https://kantarware.visualstudio.com/_usersSettings/tokens' , Where: AutomationCore_Azure},
+        Language: '',
+        NoAction: {Type: Info,Msg: 'No' , Where: AutomationCore_Azure},
+        NoEvidences: {Type: Info,Msg: There are no images for this test or some iteration has not been performed. , Where: azureConnection},
+        NoExecutions: {Type: Info,Msg: There are no runs for this test , Where: azureConnection},
+        NoTranslating: 'The messages were not changed. A new translation was not necessary ',
+        OptionInvalid: {Type: Info,Msg: it is not a valid option , Where: azureConnection},
+        ProjectList: {Type: Info,Msg: List of projects , Where: azureConnection},
+        RequestOK: {Type: Info,Msg: Request successful! , Where: azureConnection},
+        ReplaceEvidence: '',
+        Exit: {Type: Info,Msg: Close the menu , Where: azureConnection},
+        StatusIDTestCase: {Type: Info,Msg: Test case point ID successfully consulted , Where: azureConnection},
+        StatusTestCase: {Type: Info,Msg: Test case consulted successfully , Where: azureConnection},
+        Step: {Type: Info,Msg: STEP , Where: AutomationCore_Azure},
+        StepName: Step,
+        StepNotFound: {Type: Info,Msg: Failed to perform this step! , Where: AutomationCore_Azure},
+        Summary: {Type: Info,Msg: This test case has no additional information. , Where: AutomationCore_Azure},
+        TestCaseList: {Type: Info,Msg: 'List of test cases:' , Where: azureConnection},
+        TestPlanList: {Type: Info,Msg: 'List of test plans:' , Where: azureConnection},
+        TestSuitList: {Type: Info,Msg: 'Test suite list:' , Where: azureConnection},
+        TranslateMessage: 'Messages translated with success!',
+        Translating: 'Please wait, the translation is running. It could take some minutes...',
+        Token: '',
+        Verb: {Type: Info,Msg: VERB , Where: AutomationCore_Azure},
+        WordParagraph: {Type: Info,Msg: 'Evidence of steps' , Where: automationAux}
+    }
