@@ -1,4 +1,10 @@
 # Starter pipeline
+container:
+steps:
+- download: none
+steps:
+- download: current
+  patterns: '**/*.zip'
 - task: DockerCompose@0
   inputs:
     containerregistrytype: 'Azure Container Registry'
